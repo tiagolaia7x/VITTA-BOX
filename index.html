@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="VITTA BOX — eletrônicos e acessórios para facilitar sua vida.">
+<title>VITTA BOX | Tecnologia que facilita sua vida</title>
+<style>
+:root{--black:#080808;--white:#fff;--gray:#f3f3f3;--muted:#777;--line:#e7e7e7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--black);background:#fff}
+a{color:inherit;text-decoration:none}button,input,select{font:inherit}
+.topbar{background:#080808;color:#fff;text-align:center;padding:9px 12px;font-size:12px;letter-spacing:1.2px}
+header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
+.nav{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:17px 20px;gap:20px}
+.brand{font-size:25px;font-weight:900;letter-spacing:3px}.brand small{display:block;font-size:9px;letter-spacing:4px;text-align:center;margin-top:3px}
+.links{display:flex;gap:24px;font-size:13px;font-weight:700}.actions{display:flex;align-items:center;gap:10px}
+.iconbtn{border:1px solid var(--line);background:#fff;border-radius:30px;padding:10px 14px;cursor:pointer;font-weight:700}
+.hero{background:linear-gradient(110deg,#050505 0%,#171717 65%,#333 100%);color:#fff;min-height:390px;display:flex;align-items:center}
+.hero-inner{max-width:1180px;width:100%;margin:auto;padding:65px 24px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.eyebrow{font-size:11px;letter-spacing:3px;color:#bbb;font-weight:bold}.hero h1{font-size:clamp(38px,6vw,68px);line-height:.98;margin:18px 0;letter-spacing:-2px}.hero p{color:#ccc;line-height:1.7;max-width:470px}
+.cta{display:inline-block;background:#fff;color:#080808;border:0;border-radius:3px;padding:15px 23px;font-size:12px;font-weight:900;letter-spacing:1px;margin-top:14px;cursor:pointer}
+.hero-art{border:1px solid #444;border-radius:8px;min-height:235px;display:flex;align-items:center;justify-content:center;text-align:center;padding:25px;background:radial-gradient(circle at 50% 40%,#3c3c3c,#101010 65%)}
+.hero-art strong{font-size:clamp(35px,5vw,58px);letter-spacing:5px}.hero-art span{display:block;color:#aaa;font-size:10px;letter-spacing:3px;margin-top:12px}
+.wrap{max-width:1180px;margin:auto;padding:55px 20px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:25px}.section-head h2{font-size:27px;margin:0}.section-head p{color:var(--muted);font-size:13px;margin:7px 0 0}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}.tools input,.tools select{padding:12px;border:1px solid #ddd;border-radius:4px;background:#fff;min-width:180px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{border:1px solid var(--line);background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.product-art{height:190px;background:#f4f4f4;display:flex;align-items:center;justify-content:center;font-size:58px;color:#111}
+.product-info{padding:16px;display:flex;flex-direction:column;flex:1}.tag{font-size:9px;letter-spacing:1.5px;color:#888;font-weight:bold}.product-info h3{font-size:15px;margin:9px 0}.desc{font-size:12px;color:#777;line-height:1.5;min-height:36px}.price{font-size:19px;font-weight:900;margin:13px 0}.buy{background:#080808;color:#fff;border:0;padding:12px;cursor:pointer;font-size:11px;font-weight:900;letter-spacing:1px}
+.empty{padding:35px;text-align:center;color:#777;grid-column:1/-1}.benefits{background:#f5f5f5}.benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.benefit{padding:22px;background:#fff;border:1px solid var(--line)}.benefit b{display:block;margin:9px 0}.benefit p{font-size:12px;color:#777;line-height:1.5}
+footer{background:#080808;color:#fff;padding:42px 20px}.foot{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.foot p{color:#aaa;font-size:12px;line-height:1.7}.foot .brand{margin-bottom:12px}.copyright{border-top:1px solid #333;margin-top:28px;padding-top:18px;color:#888;font-size:11px;text-align:center}
+.whats{position:fixed;right:18px;bottom:18px;z-index:20;background:#111;color:#fff;border-radius:40px;padding:15px 19px;font-size:12px;font-weight:bold;box-shadow:0 5px 25px #0003}
+.overlay{position:fixed;inset:0;background:#0008;z-index:30;display:none}.overlay.open{display:block}.cart{position:absolute;right:0;top:0;height:100%;width:min(420px,100%);background:#fff;padding:22px;display:flex;flex-direction:column}.cart-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ddd;padding-bottom:15px}.cart-items{overflow:auto;flex:1}.cart-row{padding:15px 0;border-bottom:1px solid #eee;display:flex;justify-content:space-between;gap:12px;font-size:13px}.cart-row button{border:0;background:none;text-decoration:underline;cursor:pointer}.cart-total{padding:15px 0;font-weight:900;display:flex;justify-content:space-between}.checkout{background:#080808;color:#fff;padding:15px;border:0;font-weight:bold;cursor:pointer}.note{font-size:11px;color:#777;line-height:1.5}
+@media(max-width:800px){.links{display:none}.hero-inner{grid-template-columns:1fr;padding:48px 20px}.hero-art{min-height:150px}.grid{grid-template-columns:repeat(2,1fr);gap:10px}.product-art{height:145px}.product-info{padding:12px}.benefit-grid{grid-template-columns:1fr}.wrap{padding:40px 15px}.section-head{align-items:start;flex-direction:column}}
+@media(max-width:380px){.grid{grid-template-columns:1fr}.product-art{height:180px}}
+</style>
+</head>
+<body>
+<div class="topbar">VITTA BOX · TECNOLOGIA QUE FACILITA SUA VIDA</div>
+<header><nav class="nav">
+<a class="brand" href="#">VITTA<small>BOX</small></a>
+<div class="links"><a href="#inicio">INÍCIO</a><a href="#produtos">PRODUTOS</a><a href="#sobre">SOBRE</a><a href="#contato">CONTATO</a></div>
+<div class="actions"><button class="iconbtn" onclick="openCart()">SACOLA (<span id="count">0</span>)</button></div>
+</nav></header>
+<main>
+<section class="hero" id="inicio"><div class="hero-inner">
+<div><div class="eyebrow">ELETRÔNICOS & ACESSÓRIOS</div><h1>TECNOLOGIA.<br>DO SEU JEITO.</h1><p>Descubra acessórios e eletrônicos para deixar sua rotina mais prática. Escolha seus produtos e faça seu pedido diretamente pelo WhatsApp.</p><a class="cta" href="#produtos">EXPLORAR PRODUTOS</a></div>
+<div class="hero-art"><div><strong>VITTA<br>BOX</strong><span>INOVAÇÃO NO DIA A DIA</span></div></div>
+</div></section>
+<section class="wrap" id="produtos"><div class="section-head"><div><h2>DESTAQUES DA LOJA</h2><p>Confira nossa seleção de produtos.</p></div></div>
+<div class="tools"><input id="search" type="search" placeholder="Buscar produto..." oninput="renderProducts()"><select id="category" onchange="renderProducts()"><option value="Todos">Todas as categorias</option><option>Áudio</option><option>Celular</option><option>Energia</option><option>Acessórios</option></select></div>
+<div class="grid" id="products"></div>
+<p class="note">Imagens, especificações, disponibilidade, preço e prazo devem ser confirmados antes da publicação. Os produtos abaixo são exemplos editáveis.</p>
+</section>
+<section class="benefits" id="sobre"><div class="wrap"><div class="section-head"><div><h2>COMPRAR COM FACILIDADE</h2><p>Atendimento direto e informações claras.</p></div></div><div class="benefit-grid">
+<div class="benefit"><div>◈</div><b>Atendimento direto</b><p>Tire suas dúvidas e confirme seu pedido pelo WhatsApp.</p></div>
+<div class="benefit"><div>◇</div><b>Produtos selecionados</b><p>Consulte detalhes e disponibilidade de cada item.</p></div>
+<div class="benefit"><div>□</div><b>Compra transparente</b><p>Confirme preço final, frete e prazo antes de pagar.</p></div>
+</div></div></section>
+</main>
+<footer id="contato"><div class="foot"><div><div class="brand">VITTA BOX</div><p>TECNOLOGIA QUE FACILITA SUA VIDA.</p></div><div><b>ATENDIMENTO</b><p>Pedidos e dúvidas pelo WhatsApp.<br>Consulte disponibilidade e entrega.</p><a class="cta" id="footerWhats" href="#" target="_blank">FALAR NO WHATSAPP</a></div></div><div class="copyright">© <span id="year"></span> VITTA BOX. Todos os direitos reservados.</div></footer>
+<a class="whats" id="floatWhats" href="#" target="_blank">WHATSAPP ↗</a>
+<div class="overlay" id="overlay" onclick="if(event.target===this)closeCart()"><aside class="cart"><div class="cart-head"><b>SUA SACOLA</b><button class="iconbtn" onclick="closeCart()">FECHAR ✕</button></div><div class="cart-items" id="cartItems"></div><div class="cart-total"><span>Total estimado</span><span id="total">R$ 0,00</span></div><p class="note">O pedido será enviado para confirmação. Frete e disponibilidade serão confirmados pelo atendimento.</p><button class="checkout" onclick="checkout()">ENVIAR PEDIDO PELO WHATSAPP</button></aside></div>
+<script>
+// PERSONALIZE AQUI: coloque seu WhatsApp com DDI + DDD + número, somente números.
+const WHATSAPP = "55DDDNÚMERO";
+
+// Edite os produtos abaixo. Use preços e características confirmados pelo fornecedor.
+const products = [
+ {id:1,name:"Fone Bluetooth",category:"Áudio",price:89.90,emoji:"🎧",desc:"Fone sem fio. Consulte modelo e especificações."},
+ {id:2,name:"Smartwatch",category:"Acessórios",price:129.90,emoji:"⌚",desc:"Relógio inteligente. Consulte compatibilidade."},
+ {id:3,name:"Carregador USB-C",category:"Energia",price:49.90,emoji:"🔌",desc:"Carregador. Confirme potência e compatibilidade."},
+ {id:4,name:"Caixa de Som Bluetooth",category:"Áudio",price:99.90,emoji:"🔊",desc:"Som portátil. Consulte autonomia e potência."},
+ {id:5,name:"Suporte para Celular",category:"Celular",price:29.90,emoji:"📱",desc:"Acessório prático para seu celular."},
+ {id:6,name:"Power Bank",category:"Energia",price:79.90,emoji:"🔋",desc:"Bateria portátil. Consulte capacidade real."},
+ {id:7,name:"Cabo USB-C",category:"Celular",price:24.90,emoji:"〰️",desc:"Cabo para dispositivos compatíveis."},
+ {id:8,name:"Suporte de Mesa",category:"Acessórios",price:34.90,emoji:"▣",desc:"Suporte para celular ou outros dispositivos compatíveis."}
+];
+let cart=[];
+const money=n=>n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+function renderProducts(){
+ const q=document.getElementById("search").value.toLowerCase();
+ const c=document.getElementById("category").value;
+ const list=products.filter(p=>(c==="Todos"||p.category===c)&&(p.name.toLowerCase().includes(q)||p.desc.toLowerCase().includes(q)));
+ document.getElementById("products").innerHTML=list.length?list.map(p=>`<article class="card"><div class="product-art" aria-hidden="true">${p.emoji}</div><div class="product-info"><span class="tag">${p.category.toUpperCase()}</span><h3>${p.name}</h3><div class="desc">${p.desc}</div><div class="price">${money(p.price)}</div><button class="buy" onclick="addToCart(${p.id})">ADICIONAR À SACOLA</button></div></article>`).join(""):'<div class="empty">Nenhum produto encontrado.</div>';
+}
+function addToCart(id){const p=products.find(x=>x.id===id);const item=cart.find(x=>x.id===id);if(item)item.qty++;else cart.push({...p,qty:1});updateCart()}
+function removeItem(id){cart=cart.filter(x=>x.id!==id);updateCart()}
+function updateCart(){document.getElementById("count").textContent=cart.reduce((s,p)=>s+p.qty,0);document.getElementById("cartItems").innerHTML=cart.length?cart.map(p=>`<div class="cart-row"><div><b>${p.name}</b><br>${p.qty} × ${money(p.price)}</div><button onclick="removeItem(${p.id})">Remover</button></div>`).join(""):'<p class="note">Sua sacola está vazia.</p>';document.getElementById("total").textContent=money(cart.reduce((s,p)=>s+p.price*p.qty,0))}
+function openCart(){document.getElementById("overlay").classList.add("open")}
+function closeCart(){document.getElementById("overlay").classList.remove("open")}
+function validWhats(){return /^55\d{10,11}$/.test(WHATSAPP)}
+function checkout(){if(!cart.length){alert("Adicione pelo menos um produto à sacola.");return}if(!validWhats()){alert("Configure seu WhatsApp no código antes de receber pedidos. Edite a variável WHATSAPP.");return}const lines=cart.map(p=>`• ${p.name} — ${p.qty} x ${money(p.price)} = ${money(p.qty*p.price)}`).join("\n");const total=money(cart.reduce((s,p)=>s+p.price*p.qty,0));const msg=`Olá! Quero consultar este pedido na VITTA BOX:\n\n${lines}\n\nTotal estimado: ${total}\n\nPor favor, confirme disponibilidade, frete e prazo.`;window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`,"_blank")}
+function setWhats(){const href=validWhats()?`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Olá! Vim pelo site da VITTA BOX e gostaria de informações.")}`:"#";["floatWhats","footerWhats"].forEach(id=>document.getElementById(id).href=href)}
+document.getElementById("year").textContent=new Date().getFullYear();renderProducts();updateCart();setWhats();
+</script>
+</body></html>
